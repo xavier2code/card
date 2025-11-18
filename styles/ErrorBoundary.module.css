@@ -1,0 +1,149 @@
+.errorContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8fafc;
+  padding: 2rem;
+}
+
+.errorContent {
+  max-width: 600px;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.errorTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.errorDescription {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.errorActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.reloadButton,
+.retryButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+}
+
+.reloadButton {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.reloadButton:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.retryButton {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+.retryButton:hover {
+  background-color: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+.errorDetails {
+  text-align: left;
+  margin-top: 2rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.errorDetails summary {
+  padding: 1rem;
+  background-color: #f8fafc;
+  cursor: pointer;
+  font-weight: 500;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.errorDetails summary:hover {
+  background-color: #f1f5f9;
+}
+
+.errorStack {
+  padding: 1rem;
+  background-color: #fafafa;
+  border-top: 1px solid #e2e8f0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: #334155;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .errorContainer {
+    background-color: #0f172a;
+  }
+
+  .errorContent {
+    background: #1e293b;
+    color: #e2e8f0;
+  }
+
+  .errorTitle {
+    color: #f1f5f9;
+  }
+
+  .errorDescription {
+    color: #94a3b8;
+  }
+
+  .retryButton {
+    background-color: #334155;
+    color: #cbd5e1;
+  }
+
+  .retryButton:hover {
+    background-color: #475569;
+  }
+
+  .errorDetails {
+    border-color: #334155;
+  }
+
+  .errorDetails summary {
+    background-color: #334155;
+    border-bottom-color: #334155;
+  }
+
+  .errorDetails summary:hover {
+    background-color: #475569;
+  }
+
+  .errorStack {
+    background-color: #0f172a;
+    border-top-color: #334155;
+    color: #cbd5e1;
+  }
+}
